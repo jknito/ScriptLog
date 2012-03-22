@@ -1,0 +1,655 @@
+2012/03/21 22:14:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "module/create".' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module/create')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/ktemplate/index.php/module/create
+HTTP_REFERER=http://127.0.0.1/ktemplate/index.php/module/1
+---
+2012/03/21 22:26:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.{{users}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{users}}`.
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\User.php (28)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\components\UserIdentity.php (27)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php (52)
+2012/03/21 22:26:42 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "User" cannot be found in the database.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\User.php(28): CActiveRecord::model('User')
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\components\UserIdentity.php(27): User::model()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ktemplate/index.php/user/login
+HTTP_REFERER=http://127.0.0.1/ktemplate/index.php/user/login
+---
+2012/03/21 22:28:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.{{users}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{users}}`.
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\User.php (28)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\components\UserIdentity.php (27)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php (52)
+2012/03/21 22:28:56 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{users}}" for active record class "User" cannot be found in the database.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(User))
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\User.php(28): CActiveRecord::model('User')
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\components\UserIdentity.php(27): User::model()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ktemplate/index.php/user/login
+HTTP_REFERER=http://127.0.0.1/ktemplate/index.php/user/login
+---
+2012/03/21 22:41:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php:484
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(271): CController->missingAction('login')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('login')
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/ktemplate/index.php/site/login
+---
+2012/03/21 22:56:40 [error] [php] Trying to get property of non-object (C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php:34)
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(207): CContentDecorator->run()
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(301): SiteController->endWidget()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php(5): SiteController->endContent()
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(127): require()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SiteController->renderInternal()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(785): SiteController->renderFile()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\controllers\SiteController.php(32): SiteController->render()
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): SiteController->run()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CWebApplication->run()
+REQUEST_URI=/ktemplate/index.php/site/index
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php (34)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php (5)
+2012/03/21 22:57:12 [error] [php] Trying to get property of non-object (C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php:34)
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(207): CContentDecorator->run()
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(301): SiteController->endWidget()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php(5): SiteController->endContent()
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(127): require()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SiteController->renderInternal()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(785): SiteController->renderFile()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\controllers\SiteController.php(32): SiteController->render()
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): SiteController->run()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CWebApplication->run()
+REQUEST_URI=/ktemplate/
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php (34)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php (5)
+2012/03/21 22:59:10 [error] [php] Trying to get property of non-object (C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php:34)
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(207): CContentDecorator->run()
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(301): SiteController->endWidget()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php(5): SiteController->endContent()
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(127): require()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SiteController->renderInternal()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(785): SiteController->renderFile()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\controllers\SiteController.php(32): SiteController->render()
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): SiteController->run()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CWebApplication->run()
+REQUEST_URI=/ktemplate/
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php (34)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php (5)
+2012/03/21 22:59:11 [error] [php] Trying to get property of non-object (C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php:34)
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(207): CContentDecorator->run()
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(301): SiteController->endWidget()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php(5): SiteController->endContent()
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(127): require()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SiteController->renderInternal()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(785): SiteController->renderFile()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\controllers\SiteController.php(32): SiteController->render()
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): SiteController->run()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CWebApplication->run()
+REQUEST_URI=/ktemplate/
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php (34)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php (5)
+2012/03/21 22:59:43 [error] [php] Trying to get property of non-object (C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php:34)
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(77): SiteController->renderFile()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(207): CContentDecorator->run()
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(301): SiteController->endWidget()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php(5): SiteController->endContent()
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(127): require()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php(43): SiteController->renderInternal()
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CBaseController.php(94): YiiDebugViewRenderer->renderFile()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(785): SiteController->renderFile()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\controllers\SiteController.php(32): SiteController->render()
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): SiteController->runAction()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): SiteController->run()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CWebApplication->run()
+REQUEST_URI=/ktemplate/
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\main.php (34)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\yii-debug-toolbar\components\YiiDebugViewRenderer.php (43)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\views\layouts\column1.php (5)
+2012/03/21 23:00:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.authassignment' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthAssignment`
+WHERE userid=:userid. Bound with :userid='2'.
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RAuthorizer.php (341)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RWebUser.php (21)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php (57)
+2012/03/21 23:00:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.authassignment' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthAssignment`
+WHERE userid=:userid. Bound with :userid='2'' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CDbAuthManager.php(334): CDbCommand->queryAll()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RAuthorizer.php(341): CDbAuthManager->getAuthAssignments('2')
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RWebUser.php(21): RAuthorizer->isSuperuser('2')
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CWebUser.php(239): RWebUser->afterLogin(false)
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php(57): CWebUser->login(Object(UserIdentity), 0)
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ktemplate/index.php/user/login
+HTTP_REFERER=http://127.0.0.1/ktemplate/index.php/user/login
+---
+2012/03/21 23:01:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.authassignment' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthAssignment`
+WHERE userid=:userid. Bound with :userid='2'.
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RAuthorizer.php (341)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RWebUser.php (21)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php (57)
+2012/03/21 23:01:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.authassignment' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthAssignment`
+WHERE userid=:userid. Bound with :userid='2'' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CDbAuthManager.php(334): CDbCommand->queryAll()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RAuthorizer.php(341): CDbAuthManager->getAuthAssignments('2')
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RWebUser.php(21): RAuthorizer->isSuperuser('2')
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CWebUser.php(239): RWebUser->afterLogin(false)
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\models\UserLogin.php(57): CWebUser->login(Object(UserIdentity), 0)
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): LoginController->actionLogin()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#16 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/ktemplate/index.php/user/login
+HTTP_REFERER=http://127.0.0.1/ktemplate/index.php/user/login
+---
+2012/03/21 23:01:43 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ktemplate.authitem' doesn't exist. The SQL statement executed was: SELECT COUNT(*) FROM AuthItem.
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RInstaller.php (180)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\controllers\InstallController.php (43)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php (13)
+2012/03/21 23:07:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('user')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights/assignme...')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights/assignment/user/id/2
+HTTP_REFERER=http://127.0.0.1/ktemplate/rights/assignment/user/id/2
+---
+2012/03/21 23:13:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights
+HTTP_REFERER=http://127.0.0.1/ktemplate/module
+---
+2012/03/21 23:35:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'birthday' at row 1. The SQL statement executed was: INSERT INTO `profiles` (`lastname`, `firstname`, `birthday`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3). Bound with :yp0='Sample', :yp1='Sample', :yp2='', :yp3=3.
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\controllers\AdminController.php (83)
+in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php (13)
+2012/03/21 23:35:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'birthday' at row 1. The SQL statement executed was: INSERT INTO `profiles` (`lastname`, `firstname`, `birthday`, `user_id`) VALUES (:yp0, :yp1, :yp2, :yp3). Bound with :yp0='Sample', :yp1='Sample', :yp2='', :yp3=3' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\user\controllers\AdminController.php(83): CActiveRecord->save()
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\actions\CInlineAction.php(50): AdminController->actionCreate()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('create')
+#13 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin/crea...')
+#14 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/ktemplate/user/admin/create
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/admin/create
+---
+2012/03/21 23:36:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights
+HTTP_REFERER=http://127.0.0.1/ktemplate/site/contact
+---
+2012/03/21 23:37:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights
+HTTP_REFERER=http://127.0.0.1/ktemplate/module
+---
+2012/03/21 23:47:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:66
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/module
+---
+2012/03/21 23:47:10 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:66
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/module
+---
+2012/03/21 23:47:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights
+HTTP_REFERER=http://127.0.0.1/ktemplate/module
+---
+2012/03/21 23:51:06 [error] [exception.CException] exception 'CException' with message 'Filter "rights" is invalid. Controller "ModuleController" does not have the filter method "filterrights".' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php:47
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(73): CInlineFilter::create(Object(ModuleController), 'rights')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain::create(Object(ModuleController), Object(CInlineAction), Array)
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('view')
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module/view')
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ktemplate/module/1
+HTTP_REFERER=http://127.0.0.1/ktemplate/module
+---
+2012/03/21 23:51:25 [error] [exception.CException] exception 'CException' with message 'Filter "rights" is invalid. Controller "ModuleController" does not have the filter method "filterrights".' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php:47
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(73): CInlineFilter::create(Object(ModuleController), 'rights')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain::create(Object(ModuleController), Object(CInlineAction), Array)
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('view')
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module/view')
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/ktemplate/module/1
+HTTP_REFERER=http://127.0.0.1/ktemplate/module
+---
+2012/03/21 23:55:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('index')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/site/index
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/profile
+---
+2012/03/21 23:56:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('index')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/site/index
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/login
+---
+2012/03/21 23:59:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights
+HTTP_REFERER=http://127.0.0.1/ktemplate/site/contact
+---
+2012/03/22 00:04:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('view')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/user/view/...')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/user/user/view/id/1
+HTTP_REFERER=http://127.0.0.1/ktemplate/user
+---
+2012/03/22 00:04:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('rights')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/rights
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/user/view/id/1
+---
+2012/03/22 00:06:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/user
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/profile
+---
+2012/03/22 00:06:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/user
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/profile
+---
+2012/03/22 00:07:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(RWebUser), 'You are not aut...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('create')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin/crea...')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/user/admin/create
+---
+2012/03/22 00:07:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/module
+---
+2012/03/22 00:07:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('module')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/module
+---
+2012/03/22 00:09:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('index')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/site/index
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/profile
+---
+2012/03/22 00:09:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php:62
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RightsFilter.php(57): RController->accessDenied()
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilter.php(39): RightsFilter->preFilter(Object(CFilterChain))
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\modules\rights\components\RController.php(36): CFilter->filter(Object(CFilterChain))
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CInlineFilter.php(59): RController->filterRights(Object(CFilterChain))
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(276): CController->run('index')
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CWebApplication.php(135): CWebApplication->runController('site/index')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/ktemplate/site/index
+HTTP_REFERER=http://127.0.0.1/ktemplate/user/profile
+---
+2012/03/22 01:15:10 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CAssetManager.php:116
+Stack trace:
+#0 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CAssetManager.php(101): CAssetManager->setBasePath('C:\Program File...')
+#1 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\web\CAssetManager.php(219): CAssetManager->getBasePath()
+#2 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\bootstrap\components\Bootstrap.php(351): CAssetManager->publish('C:\Program File...', false, -1, true)
+#3 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\bootstrap\components\Bootstrap.php(89): Bootstrap->getAssetsUrl()
+#4 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\protected\extensions\bootstrap\components\Bootstrap.php(62): Bootstrap->registerCss()
+#5 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CModule.php(388): Bootstrap->init()
+#6 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CModule.php(493): CModule->getComponent('bootstrap')
+#7 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\base\CApplication.php(146): CModule->preloadComponents()
+#8 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\YiiBase.php(127): CApplication->__construct('C:\Program File...')
+#9 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\yii-1.1.10.r3566\framework\YiiBase.php(100): YiiBase::createApplication('CWebApplication', 'C:\Program File...')
+#10 C:\Program Files\Apache Software Foundation\Apache2.2\htdocs\ktemplate\index.php(13): YiiBase::createWebApplication('C:\Program File...')
+#11 {main}
+REQUEST_URI=/ktemplate/
+HTTP_REFERER=http://127.0.0.1/ktemplate/site/page?view=about
+---
