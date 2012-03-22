@@ -1,0 +1,21 @@
+=kTemplate=
+
+==Objetivos==
+
+El objetivo del proyecto es proporcionar un skeleton o template para aplicaciones utilizando el framework Yii.
+
+==Componentes==
+
+Yii 1.1.10
+yii-user 
+rights
+bootstrap ( extension de Yii que implementa bootstrap de twitter )
+yii-debug-toolbar
+
+==Trabajo==
+
+Se unieron todos los componentes y en este momento se tiene un skeleton funcional, pero no agradable a la vista. Estoy trabajando en los cambios del main.
+
+==Historia de Cambios==
+
+2012-03-22 : jknito : creacion del proyecto
