@@ -1,8 +1,7 @@
 <?php
 
-class SiteController extends RController
+class SiteController extends Controller
 {
-    public function filters() { return array( 'rights', ); }
 	/**
 	 * Declares class-based actions.
 	 */

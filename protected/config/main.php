@@ -10,10 +10,7 @@ return array(
 	'name'=>'kTemplate',
 
 	// preloading 'log' component
-	'preload'=>array(
-        'log',
-        'bootstrap',
-    ),
+	'preload'=>array('log'),
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -31,27 +28,46 @@ return array(
 			'password'=>'asd123',
 			'ipFilters'=>array('127.0.0.1','::1'),
             'generatorPaths'=>array(
-                'bootstrap.gii',
+                //'bootstrap.gii',
             ),
 		),
         'user',
         'rights'=>array(
             //'install'=>true,
             'enableBizRule'=>false,
-        ),
-    ),
+		),
+	),
 
 	// application components
 	'components'=>array(
-        'bootstrap'=>array(
-            'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
-        ),
-        'user'=>array(
+		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
             'loginUrl' => array('/user/login'),
             'class'=>'RWebUser',
 		),
+        'clientScript' => array(
+            'scriptMap' => array(
+                'jquery.js'=>false,
+                'jquery.min.js'=>false,
+            ),
+            'packages'=>array(
+                'jquery'=>array(
+                    'baseUrl'=>'bootstrap/',
+                    'js'=>array('js/jquery-1.7.2.min.js'),
+                ),
+                'bootstrap'=>array(
+                    'baseUrl'=>'bootstrap/',
+                    'js'=>array('js/bootstrap.min.js'),
+                    'css'=>array(
+                        'css/bootstrap.min.css',
+                        'css/custom.css',
+                        'css/bootstrap-responsive.min.css',
+                    ),
+                    'depends'=>array('jquery'),
+                ),
+            ),
+        ),
         'authManager'=>array(
             'class'=>'RDbAuthManager',
         ),
@@ -83,10 +99,10 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-                array(
+				array(
                     'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
                     'ipFilters'=>array('127.0.0.1'),
-                ),
+				),
 			),
 		),
 	),
