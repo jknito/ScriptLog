@@ -4,17 +4,17 @@ $this->breadcrumbs=array(
 	UserModule::t('Manage'),
 );
 ?>
-<h1><?php echo UserModule::t("Manage Users"); ?></h1>
-
 <?php echo $this->renderPartial('_menu', array(
-		'list'=> array(
-			CHtml::link(UserModule::t('Create User'),array('create')),
-		),
+		'list'=> array(),
 	));
 ?>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
+    //'htmlOptions'=>array(
+    //    'class'=>'table table-bordered table-striped table-condensed',
+    //),
+    'itemsCssClass'=>'table table-bordered table-striped table-condensed',
 	'columns'=>array(
 		array(
 			'name' => 'id',

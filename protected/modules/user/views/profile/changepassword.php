@@ -5,19 +5,19 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h2><?php echo UserModule::t("Change password"); ?></h2>
 <?php echo $this->renderPartial('menu'); ?>
 
-<div class="form">
+<div class="row-fluid">
+<div class="span12-fluid">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'changepassword-form',
 	'enableAjaxValidation'=>true,
+    'htmlOptions' => array("class"=>"well"),
 )); ?>
 
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
 	<?php echo CHtml::errorSummary($model); ?>
 	
-	<div class="row">
+	<div>
 	<?php echo $form->labelEx($model,'password'); ?>
 	<?php echo $form->passwordField($model,'password'); ?>
 	<?php echo $form->error($model,'password'); ?>
@@ -26,16 +26,17 @@ $this->breadcrumbs=array(
 	</p>
 	</div>
 	
-	<div class="row">
+	<div>
 	<?php echo $form->labelEx($model,'verifyPassword'); ?>
 	<?php echo $form->passwordField($model,'verifyPassword'); ?>
 	<?php echo $form->error($model,'verifyPassword'); ?>
 	</div>
 	
 	
-	<div class="row submit">
-	<?php echo CHtml::submitButton(UserModule::t("Save")); ?>
+	<div >
+	<?php echo CHtml::submitButton(UserModule::t("Save"),array("class"=>"btn btn-primary")); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
+</div><!-- form -->
 </div><!-- form -->

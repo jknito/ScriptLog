@@ -28,8 +28,8 @@
             $user = Yii::app()->getModule('user')->user(Yii::app()->user->id);
             $this->widget('zii.widgets.CMenu',array(
                 'htmlOptions'=>array('class'=>'nav'),
-                'items'=>array(
-                    array('label'=>'Home', 'url'=>array('/site/index')),
+                'items'=>array(        
+                    array('label'=>'Menu', 'url'=>$this->createUrl('/site/menu'),'visible'=>!Yii::app()->user->isGuest,'active'=>$this->action->id=='menu'),
                     array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
                     array('label'=>'Contact', 'url'=>array('/site/contact')),
                 ),

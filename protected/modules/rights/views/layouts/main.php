@@ -1,8 +1,8 @@
 <?php $this->beginContent(Rights::module()->appLayout); ?>
 
-<div id="rights" class="container">
+<div id="rights" class="container row-fluid" >
 
-	<div id="content">
+	<div id="content span12-fluid">
 
 		<?php if( $this->id!=='install' ): ?>
 

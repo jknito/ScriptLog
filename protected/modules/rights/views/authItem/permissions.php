@@ -24,7 +24,8 @@
 		'dataProvider'=>$dataProvider,
 		'template'=>'{items}',
 		'emptyText'=>Rights::t('core', 'No authorization items found.'),
-		'htmlOptions'=>array('class'=>'grid-view permission-table'),
+		//'htmlOptions'=>array('class'=>'grid-view permission-table'),
+		'itemsCssClass'=>'table table-bordered table-striped table-condensed',
 		'columns'=>$columns,
 	)); ?>
 

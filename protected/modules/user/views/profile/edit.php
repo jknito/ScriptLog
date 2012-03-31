@@ -3,7 +3,8 @@ $this->breadcrumbs=array(
 	UserModule::t("Profile")=>array('profile'),
 	UserModule::t("Edit"),
 );
-?><h2><?php echo UserModule::t('Edit profile'); ?></h2>
+?>
+
 <?php echo $this->renderPartial('menu'); ?>
 
 <?php if(Yii::app()->user->hasFlash('profileMessage')): ?>
@@ -11,14 +12,13 @@ $this->breadcrumbs=array(
 <?php echo Yii::app()->user->getFlash('profileMessage'); ?>
 </div>
 <?php endif; ?>
-<div class="form">
+<div class="row-fluid">
+<div class="span12-fluid">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'profile-form',
 	'enableAjaxValidation'=>true,
-	'htmlOptions' => array('enctype'=>'multipart/form-data'),
+	'htmlOptions' => array('enctype'=>'multipart/form-data', "class"=>"well"),
 )); ?>
-
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
 
 	<?php echo $form->errorSummary(array($model,$profile)); ?>
 
@@ -27,7 +27,7 @@ $this->breadcrumbs=array(
 		if ($profileFields) {
 			foreach($profileFields as $field) {
 			?>
-	<div class="row">
+
 		<?php echo $form->labelEx($profile,$field->varname);
 		
 		if ($field->widgetEdit($profile)) {
@@ -40,27 +40,27 @@ $this->breadcrumbs=array(
 			echo $form->textField($profile,$field->varname,array('size'=>60,'maxlength'=>(($field->field_size)?$field->field_size:255)));
 		}
 		echo $form->error($profile,$field->varname); ?>
-	</div>	
 			<?php
 			}
 		}
 ?>
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20)); ?>
+        <div class="control-group">
+        <?php echo $form->labelEx($model,'username',array("class"=>"control-label")); ?>
+        <div class="controls">
+		<?php echo $form->textField($model,'username',array('size'=>20,'maxlength'=>20,'disabled'=>'disabled')); ?>
 		<?php echo $form->error($model,'username'); ?>
-	</div>
+        </div>
+        </div>
 
-	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'email'); ?>
-	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? UserModule::t('Create') : UserModule::t('Save')); ?>
-	</div>
+		<div>
+        <?php echo CHtml::submitButton($model->isNewRecord ? UserModule::t('Create') : UserModule::t('Save'),array("class"=>"btn btn-primary")); ?>
+        </div>
 
 <?php $this->endWidget(); ?>
 
+</div><!-- form -->
 </div><!-- form -->

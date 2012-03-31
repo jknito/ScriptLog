@@ -1,11 +1,16 @@
-<ul class="actions">
+<div class="row-fluid">
+<div class="span12-fluid">
 <?php 
-	if (count($list)) {
-		foreach ($list as $item)
-			echo "<li>".$item."</li>";
-	}
+$text = "Manage Users";
+$this->widget('zii.widgets.CMenu',array(
+    'htmlOptions'=>array('class'=>'nav nav-tabs'),
+    'items'=>array(
+        array("template"=>"<h2>$text&nbsp;</h2>"),
+        array('url'=>$this->createUrl('/user/admin'), 'label'=>UserModule::t('Manage User'), 'active'=>$this->action->id=='admin'),
+        array('url'=>$this->createUrl('create'), 'label'=>UserModule::t('Create User'), 'active'=>$this->action->id=='create'),
+    ),
+));
+
 ?>
-	<li><?php echo CHtml::link(UserModule::t('List User'),array('/user')); ?></li>
-	<li><?php echo CHtml::link(UserModule::t('Manage User'),array('admin')); ?></li>
-	<li><?php echo CHtml::link(UserModule::t('Manage Profile Field'),array('profileField/admin')); ?></li>
-</ul><!-- actions -->
+</div>
+</div>

@@ -7,19 +7,20 @@ function fnShowActions(path){
     $('[path="'+path+'"]').toggle();
 }
 </script>
-<div id="generator">
+<div id="generator" class="row-fluid">
+<div class="span12">
 
 	<h2><?php echo Rights::t('core', 'Generate items'); ?></h2>
 
 	<p><?php echo Rights::t('core', 'Please select which items you wish to generate.'); ?></p>
 
-	<div class="form">
+	<div>
 
 		<?php $form=$this->beginWidget('CActiveForm'); ?>
 
-			<div class="row">
+			<div>
 
-				<table class="items generate-item-table" border="0" cellpadding="0" cellspacing="0">
+				<table class="table table-bordered table-striped table-condensed">
 
 					<tbody>
 
@@ -63,5 +64,5 @@ function fnShowActions(path){
 		<?php $this->endWidget(); ?>
 
 	</div>
-
+</div>
 </div>

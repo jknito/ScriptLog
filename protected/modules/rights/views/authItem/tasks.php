@@ -20,7 +20,8 @@
 	    'dataProvider'=>$dataProvider,
 	    'template'=>'{items}',
 	    'emptyText'=>Rights::t('core', 'No tasks found.'),
-	    'htmlOptions'=>array('class'=>'grid-view task-table'),
+	    //'htmlOptions'=>array('class'=>'grid-view task-table'),
+        'itemsCssClass'=>'table table-bordered table-striped table-condensed',
 	    'columns'=>array(
     		array(
     			'name'=>'name',

@@ -50,6 +50,10 @@ return array(
             'scriptMap' => array(
                 'jquery.js'=>false,
                 'jquery.min.js'=>false,
+                'core.css'=>false,
+                'styles.css'=>false,
+                'pager.css'=>false,
+                'default.css'=>false,
             ),
             'packages'=>array(
                 'jquery'=>array(

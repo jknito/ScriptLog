@@ -20,7 +20,8 @@
 	    'dataProvider'=>$dataProvider,
 	    'template'=>'{items}',
 	    'emptyText'=>Rights::t('core', 'No roles found.'),
-	    'htmlOptions'=>array('class'=>'grid-view role-table'),
+	    //'htmlOptions'=>array('class'=>'grid-view role-table'),
+        'itemsCssClass'=>'table table-bordered table-striped table-condensed',
 	    'columns'=>array(
     		array(
     			'name'=>'name',

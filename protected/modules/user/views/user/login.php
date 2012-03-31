@@ -11,10 +11,10 @@ $this->breadcrumbs=array(
     <?php echo CHtml::errorSummary($model); ?>
  
         <?php echo CHtml::activeLabel($model,'username'); ?>
-        <?php echo CHtml::activeTextField($model,'username') ?>
+        <?php echo CHtml::activeTextField($model,'username',array("class"=>"span3")) ?>
  
         <?php echo CHtml::activeLabel($model,'password'); ?>
-        <?php echo CHtml::activePasswordField($model,'password') ?>
+        <?php echo CHtml::activePasswordField($model,'password',array("class"=>"span3")) ?>
 
         <label class="checkbox">
             <?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>

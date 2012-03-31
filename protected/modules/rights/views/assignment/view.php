@@ -15,7 +15,8 @@
 	    'dataProvider'=>$dataProvider,
 	    'template'=>"{items}\n{pager}",
 	    'emptyText'=>Rights::t('core', 'No users found.'),
-	    'htmlOptions'=>array('class'=>'grid-view assignment-table'),
+	    //'htmlOptions'=>array('class'=>'grid-view assignment-table'),
+        'itemsCssClass'=>'table table-bordered table-striped table-condensed',
 	    'columns'=>array(
     		array(
     			'name'=>'name',

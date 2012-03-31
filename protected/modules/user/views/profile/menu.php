@@ -1,17 +1,17 @@
-<ul class="actions">
+<div class="row-fluid">
+<div class="span12-fluid">
 <?php 
-if(UserModule::isAdmin()) {
+$user = Yii::app()->getModule('user')->user(Yii::app()->user->id);
+$user = $user->profile->firstname.' '.$user->profile->lastname;
+$this->widget('zii.widgets.CMenu',array(
+    'htmlOptions'=>array('class'=>'nav nav-tabs'),
+    'items'=>array(
+        array('url'=>$this->createUrl('/user/profile'), "template"=>"<h2>$user</h2>"),
+        array('url'=>$this->createUrl('/user/profile'), 'label'=>UserModule::t('Profile'), 'active'=>$this->action->id=='profile'),
+        array('url'=>$this->createUrl('edit'), 'label'=>UserModule::t('Edit'), 'active'=>$this->action->id=='edit'),
+        array('url'=>$this->createUrl('changepassword'), 'label'=>UserModule::t('Change password'), 'active'=>$this->action->id=='changepassword'),
+    ),
+));
 ?>
-<li><?php echo CHtml::link(UserModule::t('Manage User'),array('/user/admin')); ?></li>
-<?php 
-} else {
-?>
-<li><?php echo CHtml::link(UserModule::t('List User'),array('/user')); ?></li>
-<?php
-}
-?>
-<li><?php echo CHtml::link(UserModule::t('Profile'),array('/user/profile')); ?></li>
-<li><?php echo CHtml::link(UserModule::t('Edit'),array('edit')); ?></li>
-<li><?php echo CHtml::link(UserModule::t('Change password'),array('changepassword')); ?></li>
-<li><?php echo CHtml::link(UserModule::t('Logout'),array('/user/logout')); ?></li>
-</ul>
+</div>
+</div>

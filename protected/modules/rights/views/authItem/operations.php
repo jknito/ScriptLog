@@ -20,7 +20,8 @@
 	    'dataProvider'=>$dataProvider,
 	    'template'=>'{items}',
 	    'emptyText'=>Rights::t('core', 'No operations found.'),
-	    'htmlOptions'=>array('class'=>'grid-view operation-table sortable-table'),
+	    //'htmlOptions'=>array('class'=>'grid-view operation-table sortable-table'),
+        'itemsCssClass'=>'table table-bordered table-striped table-condensed',
 	    'columns'=>array(
 	    	array(
     			'name'=>'name',
