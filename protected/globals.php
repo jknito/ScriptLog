@@ -1,4 +1,11 @@
 <?php
+
+class GlobalConstants{
+	const UPLOAD_PATH = '/var/www/dbmanager/uploads';
+	const SCRIPT_PATH = '/var/www/dbmanager/scriptfiles';
+	const ZEROES_FILE = 5;
+}
+
 /**
  * This is the shortcut to DIRECTORY_SEPARATOR
  */

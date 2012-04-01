@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'ScriptLog',
+	'name'=>'kTemplate',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -25,7 +25,7 @@ return array(
 	'modules'=>array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'changeme',
+			'password'=>'asd123',
 			'ipFilters'=>array('127.0.0.1','::1'),
             'generatorPaths'=>array(
                 //'bootstrap.gii',
@@ -85,10 +85,10 @@ return array(
 			),
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=127.0.0.1;dbname=scriptlog',
+			'connectionString' => 'mysql:host=127.0.0.1;dbname=ktemplate',
 			'emulatePrepare' => true,
-			'username' => 'scriptlog',
-			'password' => 'scriptlog',
+			'username' => 'ktemplate',
+			'password' => 'ktemplate',
 			'charset' => 'utf8',
             'enableParamLogging' => true,
             'enableProfiling' => true,
