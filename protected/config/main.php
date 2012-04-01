@@ -25,7 +25,7 @@ return array(
 	'modules'=>array(
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'asd123',
+			'password'=>'changeme',
 			'ipFilters'=>array('127.0.0.1','::1'),
             'generatorPaths'=>array(
                 //'bootstrap.gii',
