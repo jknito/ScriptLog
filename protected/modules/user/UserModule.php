@@ -237,12 +237,4 @@ class UserModule extends CWebModule
 	public function users() {
 		return User;
 	}
-
-	/**
-	 * If is Guest
-	 * @return user object or false
-	 */
-	public static function isGuest() {
-		return Yii::app()->user->isGuest;
-	}
 }

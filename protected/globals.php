@@ -34,8 +34,7 @@ function cs()
  */
 function user() 
 {
-    //return Yii::app()->getUser();
-    return Yii::app()->getModule('user');
+    return Yii::app()->getUser();
 }
  
 /**
@@ -91,17 +90,7 @@ function param($name)
     return Yii::app()->params[$name];
 }
 
-/**
- * para determinar si esta activo el menu
- */
-function activeMenu($url,$page){
-    $path = explode ('/',substr($url,1));
-    if(count($path) == 0) return false;
-    if(count($path) == 1) if( $path[0] == $page->action->controller->id) return true; else return false;
-    if(count($path) == 2) 
-        if( $path[1] == $page->action->id && $path[0] == $page->action->controller->id )
-            return true;
-    return false;
+function isActiveMenu($page,$controllers){
+    return true;
 }
-
 ?>
