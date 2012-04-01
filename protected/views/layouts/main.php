@@ -32,13 +32,27 @@
           <a class="brand" href="<?php echo Yii::app()->request->baseUrl; ?>"><?php echo Yii::app()->name?></a>
           <div class="nav-collapse">
             <?php 
-            $user = Yii::app()->getModule('user')->user(Yii::app()->user->id);
+            $user = user()->user();
+            //dd($this);
             $this->widget('zii.widgets.CMenu',array(
                 'htmlOptions'=>array('class'=>'nav'),
+                'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
                 'items'=>array(        
-                    array('label'=>'Menu', 'url'=>$this->createUrl('/site/menu'),'visible'=>!Yii::app()->user->isGuest,'active'=>$this->action->id=='menu'),
-                    array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-                    array('label'=>'Contact', 'url'=>array('/site/contact')),
+                    array(  
+                            'visible'=>user()->isAdmin(),
+                            'label'=>'Admin', 
+                            'url'=>'#',
+                            'linkOptions'=>array('class'=>'dropdown-toggle','data-toggle'=>'dropdown'),
+                            'itemOptions'=>array('class'=>'dropdown'), 
+                            'items'=>array(
+                                array('label'=>'Usuarios', 'url'=>url('/user/admin')),
+                                array('label'=>'Campos de Perfil', 'url'=>url('/user/profileField/admin')),
+                                array('label'=>'Permisos', 'url'=>url('/rights')),
+                    )),
+                    array('label'=>'Servicios', 'url'=>url('/servicios'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/servicios',$this)),
+                    array('label'=>'Scripts', 'url'=>url('/scripts'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/scripts',$this)),
+                    array('label'=>'Ejecuciones', 'url'=>url('/ejecuciones'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/ejecuciones',$this)),
+                    array('label'=>'Matriz Ejecuciones', 'url'=>url('/ejecutar'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/ejecutar',$this)),
                 ),
             )); 
             $this->widget('zii.widgets.CMenu',array(
