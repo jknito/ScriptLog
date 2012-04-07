@@ -4,8 +4,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Servicios', 'url'=>array('create')),
-	array('label'=>'Manage Servicios', 'url'=>array('admin')),
+	array('label'=>'Index Servicios', 'url'=>url('/servicios/index'), 'active' => activeMenu('/servicios/index',$this)),
+	array('label'=>'Create Servicios', 'url'=>url('/servicios/create'), 'active' => activeMenu('/servicios/create',$this)),
+	array('label'=>'Manage Servicios', 'url'=>url('/servicios/admin'), 'active' => activeMenu('/servicios/admin',$this)),
 );
 ?>
 

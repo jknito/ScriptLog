@@ -1,22 +1,30 @@
 <div class="row-fluid">
 <div class="span12">
 
-<?php echo CHtml::beginForm('','post',array('enctype'=>'multipart/form-data')); ?>
+<?php echo CHtml::beginForm('','post',array('enctype'=>'multipart/form-data', 'class'=>'well')); ?>
 
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
+<div class="alert alert-info">
+  <a class="close" data-dismiss="alert">×</a>
+  <?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?>
+</div>
 
-	<?php echo CHtml::errorSummary(array($model,$profile)); ?>
+	
+	<?php if( count($model->getErrors())> 0) { ?>
+		<div class='alert alert-error'>
+			<?php echo CHtml::errorSummary(array($model,$profile)); ?>
+		</div>
+	<?php } ?>
 
 		<?php echo CHtml::activeLabelEx($model,'username'); ?>
-		<?php echo CHtml::activeTextField($model,'username',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo CHtml::activeTextField($model,'username',array('size'=>20,'maxlength'=>20, 'required'=>'required')); ?>
 		<?php echo CHtml::error($model,'username'); ?>
 
 		<?php echo CHtml::activeLabelEx($model,'password'); ?>
-		<?php echo CHtml::activePasswordField($model,'password',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo CHtml::activePasswordField($model,'password',array('size'=>60,'maxlength'=>128, 'required'=>'required')); ?>
 		<?php echo CHtml::error($model,'password'); ?>
 
 		<?php echo CHtml::activeLabelEx($model,'email'); ?>
-		<?php echo CHtml::activeTextField($model,'email',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo CHtml::activeTextField($model,'email',array('size'=>60,'maxlength'=>128, 'required'=>'required')); ?>
 		<?php echo CHtml::error($model,'email'); ?>
 
 		<?php echo CHtml::activeLabelEx($model,'superuser'); ?>
@@ -51,8 +59,8 @@
 			}
 		}
 ?>
-
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+<br/>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-primary', )); ?>
 
 <?php echo CHtml::endForm(); ?>
 </div>

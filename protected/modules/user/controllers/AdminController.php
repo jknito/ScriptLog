@@ -67,23 +67,37 @@ class AdminController extends Controller
 	public function actionCreate()
 	{
 		$model=new User;
+
+		$transaction=$model->dbConnection->beginTransaction();
+
 		$profile=new Profile;
 		if(isset($_POST['User']))
 		{
-			$model->attributes=$_POST['User'];
-			$model->activkey=Yii::app()->controller->module->encrypting(microtime().$model->password);
-			$model->createtime=time();
-			$model->lastvisit=time();
-			$profile->attributes=$_POST['Profile'];
-			$profile->user_id=0;
-			if($model->validate()&&$profile->validate()) {
-				$model->password=Yii::app()->controller->module->encrypting($model->password);
-				if($model->save()) {
-					$profile->user_id=$model->id;
-					$profile->save();
-				}
-				$this->redirect(array('view','id'=>$model->id));
-			} else $profile->validate();
+			try{
+				$model->attributes=$_POST['User'];
+				$model->activkey=Yii::app()->controller->module->encrypting(microtime().$model->password);
+				$model->createtime=time();
+				$model->lastvisit=time();
+				$profile->attributes=$_POST['Profile'];
+
+				$profile->user_id=0;
+				if($model->validate()&&$profile->validate()) {
+					$model->password=Yii::app()->controller->module->encrypting($model->password);
+					if($model->save()) {
+						$profile->user_id=$model->id;
+						$profile->save();
+					}
+					app()->getModule('rights')->getAuthorizer()->authManager->assign('Authenticated', $model->id);
+
+					
+					$transaction->commit();
+
+					$this->redirect(array('view','id'=>$model->id));
+				} else $profile->validate();
+			}catch(Exception $e){
+			    $transaction->rollBack();
+			    throw  $e;
+			}
 		}
 
 		$this->render('create',array(

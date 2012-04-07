@@ -72,7 +72,7 @@
     <div class="container-fluid">
         <?php echo $content; ?>
         <footer>
-        <hr/><?php echo Yii::powered(); ?>
+        <hr/>Powered by <a href="http://jknito.net">jknito</a>
         </footer><!-- footer -->
     </div><!-- page -->
 

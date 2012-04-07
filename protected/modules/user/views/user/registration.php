@@ -7,56 +7,48 @@ $this->breadcrumbs=array(
 <h1><?php echo UserModule::t("Registration"); ?></h1>
 
 <?php if(Yii::app()->user->hasFlash('registration')): ?>
-<div class="success">
+<div class="alert alert-success">
 <?php echo Yii::app()->user->getFlash('registration'); ?>
 </div>
 <?php else: ?>
 
-<div class="form">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'registration-form',
 	'enableAjaxValidation'=>true,
 	'disableAjaxValidationAttributes'=>array('RegistrationForm_verifyCode'),
-	'htmlOptions' => array('enctype'=>'multipart/form-data'),
+	'htmlOptions' => array('enctype'=>'multipart/form-data', 'class'=>"well", ),
 )); ?>
 
-	<p class="note"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></p>
+	<div class="alert alert-info"><?php echo UserModule::t('Fields with <span class="required">*</span> are required.'); ?></div>
 	
 	<?php echo $form->errorSummary(array($model,$profile)); ?>
 	
-	<div class="row">
 	<?php echo $form->labelEx($model,'username'); ?>
-	<?php echo $form->textField($model,'username'); ?>
+	<?php echo $form->textField($model,'username', array('required' => 'required', )); ?>
 	<?php echo $form->error($model,'username'); ?>
-	</div>
 	
-	<div class="row">
 	<?php echo $form->labelEx($model,'password'); ?>
-	<?php echo $form->passwordField($model,'password'); ?>
+	<?php echo $form->passwordField($model,'password', array('required' => 'required', )); ?>
 	<?php echo $form->error($model,'password'); ?>
 	<p class="hint">
 	<?php echo UserModule::t("Minimal password length 4 symbols."); ?>
 	</p>
-	</div>
-	
-	<div class="row">
+
 	<?php echo $form->labelEx($model,'verifyPassword'); ?>
-	<?php echo $form->passwordField($model,'verifyPassword'); ?>
+	<?php echo $form->passwordField($model,'verifyPassword', array('required' => 'required', )); ?>
 	<?php echo $form->error($model,'verifyPassword'); ?>
-	</div>
-	
-	<div class="row">
+
 	<?php echo $form->labelEx($model,'email'); ?>
-	<?php echo $form->textField($model,'email'); ?>
+	<?php echo $form->textField($model,'email', array('required' => 'required', )); ?>
 	<?php echo $form->error($model,'email'); ?>
-	</div>
+
 	
 <?php 
 		$profileFields=$profile->getFields();
 		if ($profileFields) {
 			foreach($profileFields as $field) {
 			?>
-	<div class="row">
+
 		<?php echo $form->labelEx($profile,$field->varname); ?>
 		<?php 
 		if ($field->widgetEdit($profile)) {
@@ -70,13 +62,13 @@ $this->breadcrumbs=array(
 		}
 		 ?>
 		<?php echo $form->error($profile,$field->varname); ?>
-	</div>	
+
 			<?php
 			}
 		}
 ?>
 	<?php if (UserModule::doCaptcha('registration')): ?>
-	<div class="row">
+
 		<?php echo $form->labelEx($model,'verifyCode'); ?>
 		
 		<?php $this->widget('CCaptcha'); ?>
@@ -85,13 +77,12 @@ $this->breadcrumbs=array(
 		
 		<p class="hint"><?php echo UserModule::t("Please enter the letters as they are shown in the image above."); ?>
 		<br/><?php echo UserModule::t("Letters are not case-sensitive."); ?></p>
-	</div>
+
 	<?php endif; ?>
 	
-	<div class="row submit">
-		<?php echo CHtml::submitButton(UserModule::t("Register")); ?>
-	</div>
+
+		<?php echo CHtml::submitButton(UserModule::t("Register"), array('class' => 'btn btn-primary', )); ?>
+
 
 <?php $this->endWidget(); ?>
-</div><!-- form -->
 <?php endif; ?>
