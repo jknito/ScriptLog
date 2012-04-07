@@ -84,7 +84,7 @@ class ScriptsController extends RController
 			$model->registro=date('Y-m-d H-i-s');
 			$model->estado='A';
 			
-			$archivito=GlobalConstants::UPLOAD_PATH.'/'.Yii::app()->user->name.'/'.$model->nombre_archivo;
+			$archivito=UPLOAD_PATH.'/'.Yii::app()->user->name.'/'.$model->nombre_archivo;
 			
 			$file = fopen($archivito, "r");
 			while(!feof($file))
@@ -96,8 +96,8 @@ class ScriptsController extends RController
 			
 			if($model->save()){
 				// move file
-				$new_file = str_repeat("0", (GlobalConstants::ZEROES_FILE-strlen(strval($model->id)))) . strval($model->id) . '_' . $model->nombre_archivo;
-				if ( ! copy( $archivito, GlobalConstants::SCRIPT_PATH.'/'.$new_file)){
+				$new_file = str_repeat("0", (ZEROES_FILE-strlen(strval($model->id)))) . strval($model->id) . '_' . $model->nombre_archivo;
+				if ( ! copy( $archivito, SCRIPT_PATH.'/'.$new_file)){
 					$model->estado='I';
 					$model->save();
 				}

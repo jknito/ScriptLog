@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	//array('label'=>'List Scripts', 'url'=>array('index')),
-	//array('label'=>'Create Scripts', 'url'=>array('create')),
+	array('label'=>'Upload Script', 'url'=>url('/upload'), 'active' => activeMenu('/upload',$this)),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -39,16 +38,26 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'scripts-grid',
+	'htmlOptions'=>array(
+		'class' =>'span9',
+	),
+	'itemsCssClass'=>'table table-bordered table-striped table-condensed',
+	'pagerCssClass'=>'pagination',
+	'pager'=>array(
+	//	'class' => 'CLinkPager',
+		'header'=>'',
+		'htmlOptions' => array('class' => 'pagination', ),
+	),
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'id_user',
+		//'id_user',
 		'registro',
 		'tipo_servicio',
 		'nombre_archivo',
-		'observacion',
-		'estado',
+		//'observacion',
+		//'estado',
 		array(
 			'class'=>'CButtonColumn',
 		),

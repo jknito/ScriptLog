@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	//array('label'=>'List Scripts', 'url'=>array('index')),
-	//array('label'=>'Create Scripts', 'url'=>array('create')),
+	array('label'=>'Upload Script', 'url'=>url('/upload'), 'active' => activeMenu('/upload',$this)),
+	array('label'=>'Manage Scripts', 'url'=>url('/scripts/admin'), 'active' => activeMenu('/scripts/admin',$this)),
 	//array('label'=>'Update Scripts', 'url'=>array('update', 'id'=>$model->id)),
 	//array('label'=>'Delete Scripts', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	//array('label'=>'Manage Scripts', 'url'=>array('admin')),
@@ -32,7 +32,7 @@ $this->menu=array(
 	),
 )); ?>
 
-<?php echo CHtml::link("<i class='icon-download icon-white'></i> ".CHtml::encode($model->nombre_archivo), array("upload/download", 'id'=>$model->id),array("class"=>"btn btn-primary")); ?>
+<?php echo CHtml::link("<i class='icon-download icon-white'></i> ".CHtml::encode($model->nombre_archivo), url("upload/download", array('id'=>$model->id)),array("class"=>"btn btn-primary")); ?>
 
 <pre class="prettyprint linenums">
 <?php echo CHtml::encode($model->contenido_archivo); ?>

@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Servicios', 'url'=>array('index')),
-	array('label'=>'Create Servicios', 'url'=>array('create')),
-	array('label'=>'Update Servicios', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Servicios', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Servicios', 'url'=>array('admin')),
+	array('label'=>'Create Servicios', 'url'=>url('/servicios/create'), 'active' => activeMenu('/servicios/create',$this)),
+	array('label'=>'Manage Servicios', 'url'=>url('/servicios/admin'), 'active' => activeMenu('/servicios/admin',$this)),
+	array('label'=>'Update Servicios', 'url'=>url('/servicios/update',array('id'=>$model->id)), 'active' => activeMenu('/servicios/update',$this)),
+	array('label'=>'View Servicios', 'url'=>url('/servicios/view',array('id'=>$model->id)), 'active' => activeMenu('/servicios/view',$this)),
 );
 ?>
 
@@ -17,6 +16,9 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
+	'htmlOptions'=>array(
+		'class' =>'table table-bordered table-striped table-condensed',
+		),
 	'attributes'=>array(
 		'id',
 		'nombre',
@@ -31,4 +33,6 @@ $this->menu=array(
 		'estado',
 		'comentarios',
 	),
-)); ?>
+)); 
+
+?>

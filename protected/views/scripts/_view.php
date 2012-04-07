@@ -1,9 +1,9 @@
-<div class="view">
+<div class="well">
 <div>
-	<font size="+1"><?php 
+	<span class="label label-success"><?php 
 	$user=User::model()->findByPk($data->id_user);
 	echo CHtml::encode($user->username); 
-	?></font>
+	?></span>
 	<?php echo CHtml::encode($data->registro); ?>
 	<?php echo CHtml::encode($data->tipo_servicio); ?>
 </div>

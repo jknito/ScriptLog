@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Servicios', 'url'=>array('index')),
-	array('label'=>'Create Servicios', 'url'=>array('create')),
+	array('label'=>'Create Servicios', 'url'=>url('/servicios/create'), 'active' => activeMenu('/servicios/create',$this)),
+	array('label'=>'Manage Servicios', 'url'=>url('/servicios/admin'), 'active' => activeMenu('/servicios/admin',$this)),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -37,18 +37,30 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'servicios-grid',
+	'htmlOptions'=>array(
+		'class' =>'span9',
+	),
+	'itemsCssClass'=>'table table-bordered table-striped table-condensed',
+	'pagerCssClass'=>'pagination',
+	'pager'=>array(
+	//	'class' => 'CLinkPager',
+		'header'=>'',
+	//	'htmlOptions' => array('class' => 'pagination', ),
+	),
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	//'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'nombre',
 		'tipo_servicio',
 		'tipo_motor',
 		'ambiente',
-		'ip_publica',
+		'comentarios',
 		/*
+		'ip_publica',
 		'ip_privada',
 		'puerto_publico',
 		'puerto_privado',

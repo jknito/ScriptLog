@@ -1,15 +1,13 @@
 <?php
 
-class GlobalConstants{
-	const UPLOAD_PATH = '/var/www/dbmanager/uploads';
-	const SCRIPT_PATH = '/var/www/dbmanager/scriptfiles';
-	const ZEROES_FILE = 5;
-}
 
 /**
  * This is the shortcut to DIRECTORY_SEPARATOR
  */
 defined('DS') or define('DS',DIRECTORY_SEPARATOR);
+defined('UPLOAD_PATH') or define('UPLOAD_PATH',dirname(__FILE__).'/../uploads');
+defined('SCRIPT_PATH') or define('SCRIPT_PATH',dirname(__FILE__).'/../scriptfiles');
+defined('ZEROES_FILE') or define('ZEROES_FILE',5);
  
 /**
  * This is the shortcut to Yii::app()

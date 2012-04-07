@@ -49,7 +49,7 @@
                                 array('label'=>'Campos de Perfil', 'url'=>url('/user/profileField/admin')),
                                 array('label'=>'Permisos', 'url'=>url('/rights')),
                     )),
-                    array('label'=>'Servicios', 'url'=>url('/servicios'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/servicios',$this)),
+                    array('label'=>'Servicios', 'url'=>url('/servicios'),'visible'=>user()->isAdmin(),'active'=>activeMenu('/servicios',$this)),
                     array('label'=>'Scripts', 'url'=>url('/scripts'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/scripts',$this)),
                     array('label'=>'Ejecuciones', 'url'=>url('/ejecuciones'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/ejecuciones',$this)),
                     array('label'=>'Matriz Ejecuciones', 'url'=>url('/ejecutar'),'visible'=>!user()->isGuest(),'active'=>activeMenu('/ejecutar',$this)),

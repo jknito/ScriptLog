@@ -19,7 +19,7 @@ class UploadController extends RController
 
 		//echo $file;
 		
-		if (file_exists( GlobalConstants::SCRIPT_PATH.'/'.$file)) {
+		if (file_exists( SCRIPT_PATH.'/'.$file)) {
 			header('Content-Description: File Transfer');
 			header('Content-Type: text/plain');
 			header('Content-Disposition: attachment; filename='.basename($file));
@@ -27,10 +27,10 @@ class UploadController extends RController
 			header('Expires: 0');
 			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 			header('Pragma: public');
-			header('Content-Length: ' . filesize(GlobalConstants::SCRIPT_PATH.'/'.$file));
+			header('Content-Length: ' . filesize(SCRIPT_PATH.'/'.$file));
 			ob_clean();
 			flush();
-			readfile(GlobalConstants::SCRIPT_PATH.'/'.$file);
+			readfile(SCRIPT_PATH.'/'.$file);
 			exit;
 		}
 		
@@ -38,11 +38,11 @@ class UploadController extends RController
 
  	public function actions()
     {
-        return array(
+    	return array(
             'upload'=>array(
                 'class'=>'ext.xupload.actions.XUploadAction',
         		'subfolderVar' => 'folder',
-        		'path' => GlobalConstants::UPLOAD_PATH,// realpath("/var/www/dbmanager/uploads"),
+        		'path' => UPLOAD_PATH,
             ),
         );
     }
