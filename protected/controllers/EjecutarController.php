@@ -22,7 +22,7 @@ class EjecutarController extends RController
 		$select = "\n";
 		$from   = "FROM Scripts
 LEFT OUTER JOIN Ejecuciones ON ( Scripts.id = Ejecuciones.id_script )
-LEFT OUTER JOIN Users ON ( Ejecuciones.id_user = Users.id)\n";
+LEFT OUTER JOIN Users ON ( Ejecuciones.id_user = users.id)\n";
 		$groupby= "GROUP BY Scripts.id, Scripts.nombre_archivo\n";
 		$where  = "WHERE Scripts.estado = 'A' and ( Ejecuciones.estado is null or Ejecuciones.estado = 'A') \n";
 		$orderby= "ORDER BY Scripts.id desc";
