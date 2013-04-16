@@ -10,7 +10,7 @@
 	?>
 	</div>
 </div>
-<div class="span9">
+<div class="span9-fluid">
     <?php echo $content; ?>
 </div>
 </div>

@@ -36,6 +36,11 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 )); ?>
 </div><!-- search-form -->
 
+<style type="text/css">
+.filters td input { width: 90%; }
+.filters td { text-align: center; }
+</style>
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'scripts-grid',
 	'htmlOptions'=>array(
@@ -50,6 +55,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	),
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	//'filterCssClass'=>'',
 	'columns'=>array(
 		'id',
 		//'id_user',
@@ -60,6 +66,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		//'estado',
 		array(
 			'class'=>'CButtonColumn',
+			'htmlOptions'=>array('nowrap'=>'nowrap'),
 		),
 	),
 )); ?>
