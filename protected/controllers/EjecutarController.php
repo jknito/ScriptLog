@@ -22,7 +22,7 @@ class EjecutarController extends RController
 		$select = "\n";
 		$from   = "FROM Scripts
 LEFT OUTER JOIN Ejecuciones ON ( Scripts.id = Ejecuciones.id_script )
-LEFT OUTER JOIN Users ON ( Ejecuciones.id_user = users.id)\n";
+LEFT OUTER JOIN users ON ( Ejecuciones.id_user = users.id)\n";
 		$groupby= "GROUP BY Scripts.id, Scripts.nombre_archivo\n";
 		$where  = "WHERE Scripts.estado = 'A' and ( Ejecuciones.estado is null or Ejecuciones.estado = 'A') \n";
 		$orderby= "ORDER BY Scripts.id desc";
@@ -30,7 +30,7 @@ LEFT OUTER JOIN Users ON ( Ejecuciones.id_user = users.id)\n";
 		
 		foreach( $servicios as $key => $value ){
 			$select .= "MAX( IF( id_servicio = ".$value->id.", Ejecuciones.id, NULL)) \"".$value->id."\", \n";
-			$select .= "MAX( IF( id_servicio = ".$value->id.", Users.username, NULL)) \"".$value->nombre."\", \n";
+			$select .= "MAX( IF( id_servicio = ".$value->id.", users.username, NULL)) \"".$value->nombre."\", \n";
 		}
 
 		$select = "SELECT".$select."Scripts.id, Scripts.nombre_archivo \"Nombre del Script\"\n";
